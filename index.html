@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vril Craft</title>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         :root {
@@ -44,9 +44,6 @@
             color: var(--text-color);
             transition: var(--transition);
             overflow-x: hidden;
-            background-image: url('https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif');
-            background-size: cover;
-            background-repeat: repeat;
         }
 
         .container {
@@ -71,7 +68,7 @@
             font-size: 28px;
             font-weight: 700;
             color: var(--agarthan-gold);
-            font-family: 'UnifrakturCook', cursive;
+            font-family: 'MedievalSharp', cursive;
             text-shadow: 2px 2px 4px var(--agarthan-red);
         }
 
@@ -86,6 +83,7 @@
             font-weight: 500;
             transition: var(--transition);
             position: relative;
+            font-family: 'MedievalSharp', cursive;
         }
 
         .nav-link:hover {
@@ -124,6 +122,7 @@
             font-size: 16px;
             transition: var(--transition);
             border: 2px solid var(--agarthan-gold);
+            font-family: 'MedievalSharp', cursive;
         }
 
         .search-input:focus {
@@ -141,6 +140,7 @@
         .toggle-label {
             font-size: 14px;
             font-weight: 500;
+            font-family: 'MedievalSharp', cursive;
         }
 
         .toggle-switch {
@@ -230,12 +230,14 @@
             margin-bottom: 10px;
             color: var(--agarthan-gold);
             text-shadow: 1px 1px 2px var(--agarthan-red);
+            font-family: 'MedievalSharp', cursive;
         }
 
         .card-desc {
             font-size: 14px;
             color: var(--text-secondary);
             margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
         }
 
         .card-btn {
@@ -248,6 +250,7 @@
             font-weight: 500;
             transition: var(--transition);
             border: 2px solid var(--primary-dark);
+            font-family: 'MedievalSharp', cursive;
         }
 
         .card-btn:hover {
@@ -267,9 +270,12 @@
             width: 100%;
             background-color: var(--background-color);
             z-index: 1000;
-            background-image: url('https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif');
-            background-size: cover;
-            background-repeat: repeat;
+        }
+
+        .loading-gif {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .spinner {
@@ -306,7 +312,7 @@
 </head>
 <body>
     <div class="loading" id="loading">
-        <div class="spinner"></div>
+        <img src="https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif" alt="Loading" class="loading-gif">
     </div>
 
     <div id="particles-js"></div>
@@ -317,7 +323,7 @@
             <nav class="nav">
                 <a href="#" class="nav-link">Home</a>
                 <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Contact</a>
+                <a href="https://barfbagx2.github.io/TheGoonLagoonV67/" class="nav-link" target="_blank">Contact</a>
                 <div class="toggle-container">
                     <span class="toggle-label">Dark Mode</span>
                     <label class="toggle-switch">
@@ -344,73 +350,73 @@
                 title: "Agartha Portal",
                 description: "Gateway to the hidden realms of Agartha.",
                 url: "https://www.agartha-portal.com",
-                img: "https://via.placeholder.com/300x180?text=Agartha+Portal"
+                img: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Vril Technology",
                 description: "Explore the mysteries of Vril technology.",
                 url: "https://www.vril-tech.com",
-                img: "https://via.placeholder.com/300x180?text=Vril+Technology"
+                img: "https://images.unsplash.com/photo-1517147177326-b37599372b73?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Ancient Civilizations",
                 description: "Discover the secrets of ancient civilizations.",
                 url: "https://www.ancient-civilizations.com",
-                img: "https://via.placeholder.com/300x180?text=Ancient+Civilizations"
+                img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Esoteric Knowledge",
                 description: "Unlock the esoteric knowledge of the past.",
                 url: "https://www.esoteric-knowledge.com",
-                img: "https://via.placeholder.com/300x180?text=Esoteric+Knowledge"
+                img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Hidden Realms",
                 description: "Journey through the hidden realms of the Earth.",
                 url: "https://www.hidden-realms.com",
-                img: "https://via.placeholder.com/300x180?text=Hidden+Realms"
+                img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Forbidden Archeology",
                 description: "Explore the forbidden archeological sites.",
                 url: "https://www.forbidden-archeology.com",
-                img: "https://via.placeholder.com/300x180?text=Forbidden+Archeology"
+                img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Lost Technologies",
                 description: "Discover the lost technologies of the past.",
                 url: "https://www.lost-technologies.com",
-                img: "https://via.placeholder.com/300x180?text=Lost+Technologies"
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Ancient Symbols",
                 description: "Unravel the mysteries of ancient symbols.",
                 url: "https://www.ancient-symbols.com",
-                img: "https://via.placeholder.com/300x180?text=Ancient+Symbols"
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Hidden Knowledge",
                 description: "Access the hidden knowledge of the ancients.",
                 url: "https://www.hidden-knowledge.com",
-                img: "https://via.placeholder.com/300x180?text=Hidden+Knowledge"
+                img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Esoteric Wisdom",
                 description: "Gain esoteric wisdom from the past.",
                 url: "https://www.esoteric-wisdom.com",
-                img: "https://via.placeholder.com/300x180?text=Esoteric+Wisdom"
+                img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Ancient Mysteries",
                 description: "Solve the ancient mysteries of the world.",
                 url: "https://www.ancient-mysteries.com",
-                img: "https://via.placeholder.com/300x180?text=Ancient+Mysteries"
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             },
             {
                 title: "Hidden Treasures",
                 description: "Find the hidden treasures of the Earth.",
                 url: "https://www.hidden-treasures.com",
-                img: "https://via.placeholder.com/300x180?text=Hidden+Treasures"
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             }
         ];
 
