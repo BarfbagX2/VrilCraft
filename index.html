@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TGL's Vril Craft</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Vril Craft</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         :root {
-            --primary-color: #6200ee;
-            --primary-light: #9e47ff;
-            --primary-dark: #3700b3;
-            --background-color: #f5f5f5;
-            --card-background: #ffffff;
-            --text-color: #333333;
-            --text-secondary: #666666;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary-color: #8a2be2;
+            --primary-light: #9370db;
+            --primary-dark: #4b0082;
+            --background-color: #1a1a2e;
+            --card-background: #16213e;
+            --text-color: #e6e6e6;
+            --text-secondary: #a0a0a0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             --transition: all 0.3s ease;
+            --agarthan-gold: #d4af37;
+            --agarthan-red: #8b0000;
         }
 
         .dark-mode {
-            --primary-color: #bb86fc;
-            --primary-light: #eaddff;
-            --primary-dark: #3700b3;
-            --background-color: #121212;
-            --card-background: #1e1e1e;
-            --text-color: #ffffff;
-            --text-secondary: #aaaaaa;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --primary-color: #9370db;
+            --primary-light: #d8bfd8;
+            --primary-dark: #4b0082;
+            --background-color: #0a0a1a;
+            --card-background: #0d1321;
+            --text-color: #f0f0f0;
+            --text-secondary: #c0c0c0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
 
         * {
@@ -42,12 +44,18 @@
             color: var(--text-color);
             transition: var(--transition);
             overflow-x: hidden;
+            background-image: url('https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif');
+            background-size: cover;
+            background-repeat: repeat;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            background-color: rgba(26, 26, 46, 0.8);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
         }
 
         header {
@@ -60,9 +68,11 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--agarthan-gold);
+            font-family: 'UnifrakturCook', cursive;
+            text-shadow: 2px 2px 4px var(--agarthan-red);
         }
 
         .nav {
@@ -75,10 +85,26 @@
             color: var(--text-color);
             font-weight: 500;
             transition: var(--transition);
+            position: relative;
         }
 
         .nav-link:hover {
-            color: var(--primary-color);
+            color: var(--agarthan-gold);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--agarthan-gold);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
         }
 
         .search-container {
@@ -97,12 +123,13 @@
             color: var(--text-color);
             font-size: 16px;
             transition: var(--transition);
+            border: 2px solid var(--agarthan-gold);
         }
 
         .search-input:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(98, 0, 238, 0.2);
+            border-color: var(--agarthan-gold);
+            box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
         }
 
         .toggle-container {
@@ -154,7 +181,7 @@
         }
 
         input:checked + .slider {
-            background-color: var(--primary-color);
+            background-color: var(--agarthan-gold);
         }
 
         input:checked + .slider:before {
@@ -177,17 +204,20 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.5s ease forwards;
+            border: 2px solid var(--agarthan-gold);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--agarthan-red);
         }
 
         .card-img {
             width: 100%;
             height: 180px;
             object-fit: cover;
+            border-bottom: 2px solid var(--agarthan-gold);
         }
 
         .card-content {
@@ -198,7 +228,8 @@
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 10px;
-            color: var(--text-color);
+            color: var(--agarthan-gold);
+            text-shadow: 1px 1px 2px var(--agarthan-red);
         }
 
         .card-desc {
@@ -210,16 +241,19 @@
         .card-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--agarthan-gold);
+            color: var(--primary-dark);
             text-decoration: none;
             border-radius: 4px;
             font-weight: 500;
             transition: var(--transition);
+            border: 2px solid var(--primary-dark);
         }
 
         .card-btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--agarthan-red);
+            color: white;
+            border-color: white;
         }
 
         .loading {
@@ -233,13 +267,16 @@
             width: 100%;
             background-color: var(--background-color);
             z-index: 1000;
+            background-image: url('https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif');
+            background-size: cover;
+            background-repeat: repeat;
         }
 
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid rgba(98, 0, 238, 0.2);
-            border-top-color: var(--primary-color);
+            border: 5px solid rgba(138, 43, 226, 0.2);
+            border-top-color: var(--agarthan-gold);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -276,7 +313,7 @@
 
     <div class="container">
         <header>
-            <div class="logo">Link Collection</div>
+            <div class="logo">Vril Craft</div>
             <nav class="nav">
                 <a href="#" class="nav-link">Home</a>
                 <a href="#" class="nav-link">About</a>
@@ -304,76 +341,76 @@
         // Sample data for links
         const links = [
             {
-                title: "Google",
-                description: "Search engine and online productivity suite.",
-                url: "https://www.google.com",
-                img: "https://via.placeholder.com/300x180?text=Google"
+                title: "Agartha Portal",
+                description: "Gateway to the hidden realms of Agartha.",
+                url: "https://www.agartha-portal.com",
+                img: "https://via.placeholder.com/300x180?text=Agartha+Portal"
             },
             {
-                title: "GitHub",
-                description: "Platform for version control and collaboration.",
-                url: "https://www.github.com",
-                img: "https://via.placeholder.com/300x180?text=GitHub"
+                title: "Vril Technology",
+                description: "Explore the mysteries of Vril technology.",
+                url: "https://www.vril-tech.com",
+                img: "https://via.placeholder.com/300x180?text=Vril+Technology"
             },
             {
-                title: "Stack Overflow",
-                description: "Q&A site for programmers.",
-                url: "https://stackoverflow.com",
-                img: "https://via.placeholder.com/300x180?text=Stack+Overflow"
+                title: "Ancient Civilizations",
+                description: "Discover the secrets of ancient civilizations.",
+                url: "https://www.ancient-civilizations.com",
+                img: "https://via.placeholder.com/300x180?text=Ancient+Civilizations"
             },
             {
-                title: "MDN Web Docs",
-                description: "Comprehensive resource for web developers.",
-                url: "https://developer.mozilla.org",
-                img: "https://via.placeholder.com/300x180?text=MDN+Web+Docs"
+                title: "Esoteric Knowledge",
+                description: "Unlock the esoteric knowledge of the past.",
+                url: "https://www.esoteric-knowledge.com",
+                img: "https://via.placeholder.com/300x180?text=Esoteric+Knowledge"
             },
             {
-                title: "YouTube",
-                description: "Video sharing platform.",
-                url: "https://www.youtube.com",
-                img: "https://via.placeholder.com/300x180?text=YouTube"
+                title: "Hidden Realms",
+                description: "Journey through the hidden realms of the Earth.",
+                url: "https://www.hidden-realms.com",
+                img: "https://via.placeholder.com/300x180?text=Hidden+Realms"
             },
             {
-                title: "Wikipedia",
-                description: "Free online encyclopedia.",
-                url: "https://www.wikipedia.org",
-                img: "https://via.placeholder.com/300x180?text=Wikipedia"
+                title: "Forbidden Archeology",
+                description: "Explore the forbidden archeological sites.",
+                url: "https://www.forbidden-archeology.com",
+                img: "https://via.placeholder.com/300x180?text=Forbidden+Archeology"
             },
             {
-                title: "Twitter",
-                description: "Social media platform.",
-                url: "https://www.twitter.com",
-                img: "https://via.placeholder.com/300x180?text=Twitter"
+                title: "Lost Technologies",
+                description: "Discover the lost technologies of the past.",
+                url: "https://www.lost-technologies.com",
+                img: "https://via.placeholder.com/300x180?text=Lost+Technologies"
             },
             {
-                title: "Reddit",
-                description: "Social news aggregation and discussion website.",
-                url: "https://www.reddit.com",
-                img: "https://via.placeholder.com/300x180?text=Reddit"
+                title: "Ancient Symbols",
+                description: "Unravel the mysteries of ancient symbols.",
+                url: "https://www.ancient-symbols.com",
+                img: "https://via.placeholder.com/300x180?text=Ancient+Symbols"
             },
             {
-                title: "LinkedIn",
-                description: "Business and employment-oriented social media platform.",
-                url: "https://www.linkedin.com",
-                img: "https://via.placeholder.com/300x180?text=LinkedIn"
+                title: "Hidden Knowledge",
+                description: "Access the hidden knowledge of the ancients.",
+                url: "https://www.hidden-knowledge.com",
+                img: "https://via.placeholder.com/300x180?text=Hidden+Knowledge"
             },
             {
-                title: "Medium",
-                description: "Online publishing platform.",
-                url: "https://www.medium.com",
-                img: "https://via.placeholder.com/300x180?text=Medium"
+                title: "Esoteric Wisdom",
+                description: "Gain esoteric wisdom from the past.",
+                url: "https://www.esoteric-wisdom.com",
+                img: "https://via.placeholder.com/300x180?text=Esoteric+Wisdom"
             },
             {
-                title: "Amazon",
-                description: "E-commerce platform.",
-                url: "https://www.amazon.com",
-                img: "https://via.placeholder.com/300x180?text=Amazon"
+                title: "Ancient Mysteries",
+                description: "Solve the ancient mysteries of the world.",
+                url: "https://www.ancient-mysteries.com",
+                img: "https://via.placeholder.com/300x180?text=Ancient+Mysteries"
             },
             {
-                title: "Netflix",
-                description: "Streaming service.",
-                url: "https://www.netflix.com",
-                img: "https://via.placeholder.com/300x180?text=Netflix"
+                title: "Hidden Treasures",
+                description: "Find the hidden treasures of the Earth.",
+                url: "https://www.hidden-treasures.com",
+                img: "https://via.placeholder.com/300x180?text=Hidden+Treasures"
             }
         ];
 
@@ -386,7 +423,7 @@
                 <div class="card-content">
                     <h3 class="card-title">${link.title}</h3>
                     <p class="card-desc">${link.description}</p>
-                    <a href="${link.url}" class="card-btn" target="_blank">Visit</a>
+                    <a href="${link.url}" class="card-btn" target="_blank">Explore</a>
                 </div>
             `;
             return card;
@@ -448,7 +485,7 @@
                         }
                     },
                     color: {
-                        value: '#6200ee'
+                        value: '#8a2be2'
                     },
                     shape: {
                         type: 'circle',
@@ -480,7 +517,7 @@
                     line_linked: {
                         enable: true,
                         distance: 150,
-                        color: '#6200ee',
+                        color: '#8a2be2',
                         opacity: 0.4,
                         width: 1
                     },
@@ -530,7 +567,7 @@
             // Hide loading animation after a short delay
             setTimeout(() => {
                 document.getElementById('loading').style.display = 'none';
-            }, 1000);
+            }, 3000);
         }
 
         // Call init function when the page loads
