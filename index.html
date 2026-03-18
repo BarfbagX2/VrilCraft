@@ -308,6 +308,30 @@
             height: 100%;
             z-index: -1;
         }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -315,7 +339,7 @@
         <img src="https://image2url.com/r2/default/gifs/1773771914482-2784bcdf-f8ab-4673-9d9e-a052ca36e448.gif" alt="Loading" class="loading-gif">
     </div>
 
-    <div id="particles-js"></div>
+    <div class="background-animation" id="backgroundAnimation"></div>
 
     <div class="container">
         <header>
@@ -417,6 +441,78 @@
                 description: "Find the hidden treasures of the Earth.",
                 url: "https://www.hidden-treasures.com",
                 img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy",
+                description: "Harness the power of Vril energy.",
+                url: "https://www.vril-energy.com",
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Devices",
+                description: "Explore the advanced Vril devices.",
+                url: "https://www.vril-devices.com",
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Artifacts",
+                description: "Discover the ancient Vril artifacts.",
+                url: "https://www.vril-artifacts.com",
+                img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Architecture",
+                description: "Learn about Vril architecture.",
+                url: "https://www.vril-architecture.com",
+                img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Science",
+                description: "Explore the science behind Vril technology.",
+                url: "https://www.vril-science.com",
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Mysteries",
+                description: "Uncover the mysteries of Vril.",
+                url: "https://www.vril-mysteries.com",
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Power",
+                description: "Harness the power of Vril.",
+                url: "https://www.vril-power.com",
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy Sources",
+                description: "Explore the sources of Vril energy.",
+                url: "https://www.vril-energy-sources.com",
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy Harvesting",
+                description: "Learn about harvesting Vril energy.",
+                url: "https://www.vril-energy-harvesting.com",
+                img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy Storage",
+                description: "Discover methods for storing Vril energy.",
+                url: "https://www.vril-energy-storage.com",
+                img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy Transmission",
+                description: "Explore the transmission of Vril energy.",
+                url: "https://www.vril-energy-transmission.com",
+                img: "https://images.unsplash.com/photo-1519163114102-42a6e82680a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: "Vril Energy Conversion",
+                description: "Learn about converting Vril energy.",
+                url: "https://www.vril-energy-conversion.com",
+                img: "https://images.unsplash.com/photo-1507838153414-417bb95756f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             }
         ];
 
@@ -479,96 +575,6 @@
 
             // Add event listener for dark mode toggle
             document.getElementById('darkModeToggle').addEventListener('change', toggleDarkMode);
-
-            // Initialize particles.js
-            particlesJS('particles-js', {
-                particles: {
-                    number: {
-                        value: 80,
-                        density: {
-                            enable: true,
-                            value_area: 800
-                        }
-                    },
-                    color: {
-                        value: '#8a2be2'
-                    },
-                    shape: {
-                        type: 'circle',
-                        stroke: {
-                            width: 0,
-                            color: '#000000'
-                        }
-                    },
-                    opacity: {
-                        value: 0.5,
-                        random: true,
-                        anim: {
-                            enable: true,
-                            speed: 1,
-                            opacity_min: 0.1,
-                            sync: false
-                        }
-                    },
-                    size: {
-                        value: 3,
-                        random: true,
-                        anim: {
-                            enable: true,
-                            speed: 2,
-                            size_min: 0.1,
-                            sync: false
-                        }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: '#8a2be2',
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 1,
-                        direction: 'none',
-                        random: true,
-                        straight: false,
-                        out_mode: 'out',
-                        bounce: false,
-                        attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200
-                        }
-                    }
-                },
-                interactivity: {
-                    detect_on: 'canvas',
-                    events: {
-                        onhover: {
-                            enable: true,
-                            mode: 'grab'
-                        },
-                        onclick: {
-                            enable: true,
-                            mode: 'push'
-                        },
-                        resize: true
-                    },
-                    modes: {
-                        grab: {
-                            distance: 140,
-                            line_linked: {
-                                opacity: 1
-                            }
-                        },
-                        push: {
-                            particles_nb: 4
-                        }
-                    }
-                },
-                retina_detect: true
-            });
 
             // Hide loading animation after a short delay
             setTimeout(() => {
